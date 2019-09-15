@@ -1,5 +1,5 @@
 # RushStatsAPI-Python
-A simple, clear-code, easy-to-use wrapper for RushStatsAPI (Rush Wars API) written in Python 3!
+The simplest ever, clear-code, easy-to-use wrapper for RushStatsAPI (Rush Wars API) written in Python 3!
 ### Requirements
 - OS: Windows / Linux / Android / MacOS
 - Python version: 3.x
