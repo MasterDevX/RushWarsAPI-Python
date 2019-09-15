@@ -2,17 +2,24 @@ import json
 import requests
 
 def session(token):
-    global headers
+    global headers, url
+    url = 'https://api.rushstats.com/v1/'
     headers = {'Authorization': token}
 
 def get_player(tag):
-    return requests.get('https://api.rushstats.com/v1/player/' + tag, headers=headers).json()
+    return getdata('player/', tag)
 
 def get_team(tag):
-    return requests.get('https://api.rushstats.com/v1/team/' + tag, headers=headers).json()
+    return getdata('team/', tag)
 
 def team_search(keyword):
-    return requests.get('https://api.rushstats.com/v1/search/team/' + keyword, headers=headers).json()
+    return getdata('search/team/', keyword)
 
 def top_players(count):
-    return requests.get('https://api.rushstats.com/v1/leaderboard/players?count=' + str(count), headers=headers).json()
+    return getdata('leaderboard/players?count=', count)
+
+def getdata(end, arg):
+    if 'headers' in globals():
+        return requests.get(url + end + str(arg), headers=headers).json()
+    else:
+        print('Please authenticate using your token!')
