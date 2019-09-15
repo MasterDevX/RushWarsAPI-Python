@@ -3,8 +3,9 @@ A simple, clear-code, easy-to-use wrapper for RushStatsAPI (Rush Wars API) writt
 ### Requirements
 - json
 - requests
+### Import
+```import rushstats```
 ### Authorization
-```import rushstats``` <br>
 ```rushstats.session('token')```
 ### Getting player info
 ```rushstats.get_player('tag')```
