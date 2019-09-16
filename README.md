@@ -11,9 +11,9 @@ To connect to the API you will need an access token. If you will try to retrieve
 Then authenticate using this function (don't forget to replace ```token``` with your token): ```rushstats.session('token')```
 ### Retrieving information
 All of the functions below are returning requested data as a ```Json``` object.
-- Information about player: ```rushstats.get_player('tag')```
-- Information about team: ```rushstats.get_team('tag')```
-- Searching teams by keyword: ```rushstats.team_search('keyword')``` <br>
+- Information about player:<br> ```rushstats.get_player('tag')```
+- Information about team:<br> ```rushstats.get_team('tag')```
+- Searching teams by keyword:<br> ```rushstats.team_search('keyword')``` <br>
 (This will return only first 64 results beacause of in-game limit.)
-- Getting player leaderboard: ```rushstats.top_players(count)``` <br>
+- Getting player leaderboard:<br> ```rushstats.top_players(count)``` <br>
 (A ```count``` argument here specifies how many players from the leaderboard will be returned. It should be an integer and should be equal to any number in range 0-200.)
